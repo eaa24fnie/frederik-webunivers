@@ -12,24 +12,81 @@
     --secondary-color: #25282B;
     --tertiary-color: white;
     --dark: #B791A3;
-    --overskrift: "Encode Sans Expanded", sans-serif;
-    --font: 
+    --font: "Encode Sans Expanded", sans-serif;
 }
 
 body {
     padding: 0 100px;
+    max-width: fit-content;
+}
+
+h1 {
+    font-family: var(--font);
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+h2 {
+    font-family: var(--font);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-bottom: 0.6rem;
+}
+
+h3 {
+    font-family: var(--font);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 800; 
+}
+
+section article figure {
+    padding-top: 1rem;
+    display: flex;
+}
+
+.middle section article figure {
+    padding: 1rem 0;
+}
+
+p {
+    font-family: var(--font);
+    font-weight: 300;
+}
+
+.middle {
+    width: 50%
+}
+
+.middle article {
+    display: flex;
+    flex-direction: column;
+}
+
+.middle article figure img {
+    min-width: 50%;
+    height: 100px;
+    margin-right: 15px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.sides {
+    width:25%
 }
 
 .header {
     background-color: var(--tertiary-color);
-   display: flex;
-   justify-content: space-between; 
-   align-items: center;
-   padding: 10px;
-   font-size: 16px;
-   --brand-color: var(--primary-color);
-   font-weight: 700;
-   font-family: var(--overskrift);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    --brand-color: var(--primary-color);
+    font-weight: 700;
+    font-family: var(--font);
 }
 
 .logo {
@@ -53,7 +110,7 @@ body {
 
 .navbar ul li {
     list-style-type: none;
-    display:inline;
+    display: inline;
     margin-right:10px;
     padding-left: 1rem;
     text-align: center;
@@ -80,4 +137,47 @@ input.søg {
     padding-left: 3rem;
     background: rgb(227, 227, 227) url("/img/Searchsort.svg") no-repeat -2rem;
     background-origin: content-box;
+}
+
+section {
+    background: var(--primary-color);
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+}
+
+.h3 {
+    position: absolute;
+    background-color: white;
+    padding: 15px;
+    border-radius: 0.5rem;
+    margin-bottom: 15px;
+}
+
+main section article img {
+    width: 100%;
+}
+
+.image-container {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+    
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.senestenyt {
+    font-family: var(--font);
+    font-size: 0.7rem;
 }
