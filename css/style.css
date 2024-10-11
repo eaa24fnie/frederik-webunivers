@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #F7C1D9;
+    --secondary-color: #25282B;
+    --tertiary-color: white;
+    --dark: #B791A3;
+    --overskrift: "Encode Sans Expanded", sans-serif;
+    --font: 
+}
+
+body {
+    padding: 0 100px;
+}
+
+.header {
+    background-color: var(--tertiary-color);
+   display: flex;
+   justify-content: space-between; 
+   align-items: center;
+   padding: 10px;
+   font-size: 16px;
+   --brand-color: var(--primary-color);
+   font-weight: 700;
+   font-family: var(--overskrift);
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    padding: 0 2rem;
+}
+ 
+.navbar ul {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;   
+}
+
+.navbar ul li {
+    list-style-type: none;
+    display:inline;
+    margin-right:10px;
+    padding-left: 1rem;
+    text-align: center;
+}
+
+.søg{
+    display: block;
+    height: auto;
+    color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    font-family: var(--font);
+    border: 0;
+    outline: 0;
+}
+
+input.søg {
+    display: block;
+    padding: 1rem;
+    padding-left: 3rem;
+    background: rgb(227, 227, 227) url("/img/Searchsort.svg") no-repeat -2rem;
+    background-origin: content-box;
+}
