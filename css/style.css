@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -8,16 +9,15 @@
 }
 
 :root {
-    --primary-color: #F7C1D9;
-    --secondary-color: #25282B;
+    --primary-color: #dd8937;
+    --secondary-color: #bed2d5;
     --tertiary-color: white;
-    --dark: #B791A3;
     --font: "Encode Sans Expanded", sans-serif;
 }
 
 body {
-    padding: 0 100px;
-    max-width: fit-content;
+    padding: 0 150px;
+    max-width: 100%;
 }
 
 h1 {
@@ -42,40 +42,30 @@ h3 {
     font-weight: 800; 
 }
 
-section article figure {
-    padding-top: 1rem;
-    display: flex;
+h4 {
+    font-family: var(--font);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 800;  
 }
 
-.middle section article figure {
-    padding: 1rem 0;
-}
 
 p {
     font-family: var(--font);
-    font-weight: 300;
+    font-size: 0.8rem;
+    font-weight: 300; 
 }
 
-.middle {
-    width: 50%
-}
-
-.middle article {
+main {
     display: flex;
-    flex-direction: column;
+    width: 100%;
 }
 
-.middle article figure img {
-    min-width: 50%;
-    height: 100px;
-    margin-right: 15px;
-    object-fit: cover;
-    margin-bottom: 1rem;
+img {
+    border-radius: 20px;
 }
 
-.sides {
-    width:25%
-}
+/* header */
 
 .header {
     background-color: var(--tertiary-color);
@@ -84,9 +74,9 @@ p {
     align-items: center;
     padding: 10px;
     font-size: 16px;
-    --brand-color: var(--primary-color);
     font-weight: 700;
     font-family: var(--font);
+    height: 10vh;
 }
 
 .logo {
@@ -96,14 +86,14 @@ p {
 .navbar {
     display: flex;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
     text-transform: uppercase;
     padding: 0 2rem;
 }
  
 .navbar ul {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
     align-items: center;   
 }
@@ -139,15 +129,21 @@ input.søg {
     background-origin: content-box;
 }
 
-section {
-    background: var(--primary-color);
-    margin: 10px;
+
+/* body */
+
+.sides {
+    width:25%;
+    border: 1px solid red;
 }
 
-main {
-    display: flex;
-    width: 100%;
+.halv {
+    max-height: 44vh;
+    min-height: 44vh;
+    border: 1px solid blue;
+    margin-bottom: 2vh;
 }
+
 
 .h3 {
     position: absolute;
@@ -155,29 +151,156 @@ main {
     padding: 15px;
     border-radius: 0.5rem;
     margin-bottom: 15px;
-}
-
-main section article img {
-    width: 100%;
+    width: 90%;
 }
 
 .image-container {
-    height: auto;
     overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    height: 34vh;
 }
     
 .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px;
+}
+
+.middle {
+    width: 50%;
+    margin: 0 1rem;
+    border: 1px solid red;
+}
+
+.stor {
+    max-height: 44vh;
+    min-height: 44vh;
+    border: 1px solid blue;
+    margin-bottom: 2vh;
+    overflow: hidden;
+}
+
+.stor .image-container {
+    width: 100%;
+    height: 44vh;
+    object-fit: cover;
+}
+
+.middle-halvt {
+    display: flex;
+    object-fit: cover;
+    padding-top: 10px;
+    max-height: 185px;
+}
+
+.middle-halvt img {
+    padding-right: 10px;
+    width: 50%;
+    object-fit: cover;
+}
+
+.readmore {
+    background-color: var(--primary-color);
+    color: white;
+    font-family: var(--font);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 800; 
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.fillimage {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 44vh;
+}
+
+.fillimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.artikel-tre {
+    display: flex;
+    flex-direction: column;
+}
+
+.artikel-tre img {
+    height: 200px;
 }
 
 .senestenyt {
+    width: 100%;
+    border: 1px solid red;
+    overflow: hidden;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery figure {
+    max-width: 24%;
+}
+
+.gallery figure img {
+    width: 100%;
+    object-fit: cover;
+    height: 40%;
+}
+
+.senestenyt h2 {
+    text-align: center;
     font-family: var(--font);
-    font-size: 0.7rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 800; 
+}
+
+.popular {
+    list-style-type: none
+}
+
+.popular li {
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 300; 
+    padding-bottom: 10px;
+}
+
+.film-pakker-boks {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 42vh;
+}
+
+.filmpakke {
+    width: 50%;
+    height: 200px;
+    display: flex;
+}
+
+.filmpakke img {
+    width: 100%;
+    object-fit: cover;
+    height: 40%;
+}
+
+.h4 {
+    position: absolute;
+    border-radius: 0.5rem;
+    margin-bottom: 15px;
+    width: 90%;
 }
