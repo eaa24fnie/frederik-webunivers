@@ -9,7 +9,7 @@
 }
 
 :root {
-    --primary-color: #dd8937;
+    --primary-color: #f68a2c;
     --secondary-color: #bed2d5;
     --tertiary-color: white;
     --font: "Encode Sans Expanded", sans-serif;
@@ -52,7 +52,7 @@ h4 {
 
 p {
     font-family: var(--font);
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 300; 
 }
 
@@ -199,7 +199,7 @@ input.søg {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 34vh;
+    height: 33vh;
 }
     
 .image-container img {
@@ -241,6 +241,14 @@ input.søg {
     object-fit: cover;
 }
 
+.middle-halvt article a {
+    text-decoration: none;
+}
+
+.middle-halvt article  {
+    width: 50%;
+}
+
 .readmore {
     background-color: var(--primary-color);
     color: white;
@@ -252,6 +260,7 @@ input.søg {
     padding: 10px;
     border-radius: 0.5rem;
     border: none;
+    width: auto;
 }
 
 .fillimage {
@@ -287,7 +296,6 @@ input.søg {
 .gallery {
     display: flex;
     justify-content: space-between;
-    text-align: center;
 }
 
 .gallery figure {
@@ -372,3 +380,118 @@ figure.gallery {
   figure.gallery article h4 {
     color: white;
   }
+
+
+  /* Footer */
+
+  footer {
+    background: var(--primary-color);
+    display: flex;
+    padding: 50px 40px 100px 40px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  footer section article {
+    display: flex;
+    width: 40%;
+  }
+
+  .kontakt {
+    width: 80vh;
+  }
+
+  .om-os {
+    width: 100vh;
+  }
+
+  footer section article a {
+    padding-right: 20px;
+  }
+
+  .socialmedia {
+    width: 9vh;
+    padding: 10px;
+    background: white;
+  }
+
+  /* artikel */
+
+  .artikel {
+    width: 75%;
+    margin: 0 1rem;
+    border: 1px solid red;
+  }
+
+  .artikel-side {
+    max-height: 21vh;
+    min-height: 21vh;
+    border: 1px solid blue;
+    margin-bottom: 2vh;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .artikel-side img {
+    width: 100%;
+  }
+
+  .middle-artikel{
+    display: flex;
+    object-fit: cover;
+    padding-top: 10px;
+}
+
+.middle-artikel img {
+    padding-right: 10px;
+    width: 50%;
+    object-fit: cover;
+}
+
+.middle-artikel article a {
+    text-decoration: none;
+}
+
+.middle-artikel article  {
+    width: 50%;
+}
+
+.stor-artikel {
+    border: 1px solid blue;
+    margin-bottom: 2vh;
+    overflow: hidden;
+}
+
+.space-artikel {
+    margin-top: 10px;
+}
+
+.image-container-artikel {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+    
+.image-container-artikel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.h3-artikel {
+    position: absolute;
+    background-color: white;
+    padding: 15px;
+    border-radius: 0.5rem;
+    margin-bottom: 15px;
+    width: 90%;
+}
+
+.h3-artikel h3 {
+    font-size: 1.4rem;
+}
+
+.h3-artikel p {
+    font-size: 1rem;
+}
