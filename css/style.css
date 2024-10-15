@@ -11,13 +11,14 @@
 :root {
     --primary-color: #f68a2c;
     --secondary-color: #bed2d5;
-    --tertiary-color: white;
+    --tertiary-color: rgb(242, 242, 242);
     --font: "Encode Sans Expanded", sans-serif;
 }
 
 body {
     padding: 0 10%;
     max-width: 100%;
+    background: var(--tertiary-color);
 }
 
 h1 {
@@ -66,7 +67,10 @@ img {
 }
 
 
+
 /* header */
+
+
 
 .logo {
     width: 150px;
@@ -78,7 +82,6 @@ img {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    padding: 10px;
     font-size: 1.7vh;
     font-weight: 700;
     font-family: var(--font);
@@ -142,7 +145,11 @@ img {
     font-size: 1.5vh;
     font-weight: 500;
     font-family: var(--font);
-    background-color: white;
+    background-color: var(--tertiary-color);
+}
+
+.submenu li {
+    padding: 10px;
 }
 
 .søg{
@@ -168,7 +175,11 @@ input.søg {
     background-origin: content-box;
 }
 
+
+
 /* body */
+
+
 
 .sides {
     width:25%;
@@ -181,12 +192,15 @@ input.søg {
     border: 1px solid blue;
     margin-bottom: 2vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
 .h3 {
     position: absolute;
-    background-color: white;
+    background-color: var(--tertiary-color);
     padding: 15px;
     border-radius: 0.5rem;
     margin-bottom: 15px;
@@ -199,7 +213,6 @@ input.søg {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 33vh;
 }
     
 .image-container img {
@@ -251,7 +264,7 @@ input.søg {
 
 .readmore {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--tertiary-color);
     font-family: var(--font);
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -261,6 +274,7 @@ input.søg {
     border-radius: 0.5rem;
     border: none;
     width: auto;
+    position: sticky;
 }
 
 .fillimage {
@@ -291,11 +305,14 @@ input.søg {
     width: 100%;
     border: 1px solid red;
     overflow: hidden;
+    padding-bottom: 50px;
 }
 
 .gallery {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    text-align: center;
 }
 
 .gallery figure {
@@ -305,7 +322,6 @@ input.søg {
 .gallery figure img {
     width: 100%;
     object-fit: cover;
-    height: 40%;
 }
 
 .senestenyt h2 {
@@ -344,19 +360,29 @@ input.søg {
 
 .h4 {
     position: absolute;
-    border-radius: 0.5rem;
     font-size: 1.5vh;
-    margin-bottom: 15px;
 }
 
 figure.gallery {
     margin: 5px;
     float: left;
     transition: 0.2s;
+    color: var(--tertiary-color);
   }
   
   figure.gallery:hover {
     scale: 1.1;
+  }
+
+  figure.gallery a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  figure.gallery a:visited {
+    color: inherit;
   }
   
   figure.gallery img {
@@ -378,11 +404,14 @@ figure.gallery {
   }
 
   figure.gallery article h4 {
-    color: white;
+    color: var(--tertiary-color);
   }
 
 
+
   /* Footer */
+
+
 
   footer {
     background: var(--primary-color);
@@ -411,10 +440,14 @@ figure.gallery {
   .socialmedia {
     width: 9vh;
     padding: 10px;
-    background: white;
+    background: var(--tertiary-color);
   }
 
+
+
   /* artikel */
+
+
 
   .artikel {
     width: 75%;
@@ -461,6 +494,10 @@ figure.gallery {
     overflow: hidden;
 }
 
+.stor-artikel article {
+    padding-top: 10px;
+}
+
 .space-artikel {
     margin-top: 10px;
 }
@@ -481,7 +518,7 @@ figure.gallery {
 
 .h3-artikel {
     position: absolute;
-    background-color: white;
+    background-color: var(--tertiary-color);
     padding: 15px;
     border-radius: 0.5rem;
     margin-bottom: 15px;
@@ -494,4 +531,53 @@ figure.gallery {
 
 .h3-artikel p {
     font-size: 1rem;
+}
+
+
+
+/* Anbefalinger */
+
+
+
+.main-anbefalinger {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main-anbefalinger article {
+    width: 100%;
+}
+
+.anbefalinger {
+    padding: 0 0 50px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+}
+
+.anbefalinger h2 {
+    font-size: 2rem;
+}
+
+.full {
+    border: 1px solid blue;
+    margin-bottom: 2vh;
+    overflow: hidden;
+    width: 20vh;
+}
+
+.full .image-container {
+    width:100%;
+}
+
+.full .image-container img {
+    height: 400px;
+}
+
+.pakke {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
