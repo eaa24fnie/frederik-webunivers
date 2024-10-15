@@ -11,7 +11,7 @@
 :root {
     --primary-color: #f68a2c;
     --secondary-color: #bed2d5;
-    --tertiary-color: rgb(242, 242, 242);
+    --tertiary-color: #f2f2f2;
     --font: "Encode Sans Expanded", sans-serif;
 }
 
@@ -75,6 +75,12 @@ img {
 .logo {
     width: 150px;
     height: auto;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header {
@@ -183,18 +189,20 @@ input.søg {
 
 .sides {
     width:25%;
-    border: 1px solid red;
 }
 
 .halv {
     max-height: 44vh;
     min-height: 44vh;
-    border: 1px solid blue;
     margin-bottom: 2vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+a:visited {
+    color: inherit;
 }
 
 
@@ -205,6 +213,22 @@ input.søg {
     border-radius: 0.5rem;
     margin-bottom: 15px;
     width: 90%;
+}
+
+.h3:hover {
+    background-color: var(--primary-color);
+
+    h3, p {
+        color: var(--tertiary-color);
+    }
+}
+
+.image-container a {
+    text-decoration: none; 
+}
+
+.image-container a:visited {
+    color: inherit;
 }
 
 .image-container {
@@ -224,15 +248,17 @@ input.søg {
 .middle {
     width: 50%;
     margin: 0 1rem;
-    border: 1px solid red;
 }
 
 .stor {
     max-height: 44vh;
     min-height: 44vh;
-    border: 1px solid blue;
     margin-bottom: 2vh;
     overflow: hidden;
+}
+
+.stor article {
+    padding-top: 10px;
 }
 
 .stor .image-container {
@@ -252,6 +278,7 @@ input.søg {
     padding-right: 10px;
     width: 50%;
     object-fit: cover;
+    height: 20vh;
 }
 
 .middle-halvt article a {
@@ -260,6 +287,12 @@ input.søg {
 
 .middle-halvt article  {
     width: 50%;
+}
+
+.middle-halvt article p  {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .readmore {
@@ -274,7 +307,7 @@ input.søg {
     border-radius: 0.5rem;
     border: none;
     width: auto;
-    position: sticky;
+    position: absolute;
 }
 
 .fillimage {
@@ -284,6 +317,10 @@ input.søg {
     justify-content: center;
     align-items: flex-end;
     height: 44vh;
+}
+
+a {
+    text-decoration: none;
 }
 
 .fillimage img {
@@ -303,9 +340,8 @@ input.søg {
 
 .senestenyt {
     width: 100%;
-    border: 1px solid red;
     overflow: hidden;
-    padding-bottom: 50px;
+    padding: 50px 0 ;
 }
 
 .gallery {
@@ -386,7 +422,8 @@ figure.gallery {
   }
   
   figure.gallery img {
-    width: 100%;
+    height: 15vh;
+    width: 15vh;
     object-fit: cover;
   }
   
@@ -405,6 +442,10 @@ figure.gallery {
 
   figure.gallery article h4 {
     color: var(--tertiary-color);
+  }
+
+  .filmpakke:nth-child(4) .gallery:nth-child(2) {
+    background-color: var(--primary-color);
   }
 
 
@@ -452,13 +493,11 @@ figure.gallery {
   .artikel {
     width: 75%;
     margin: 0 1rem;
-    border: 1px solid red;
   }
 
   .artikel-side {
     max-height: 21vh;
     min-height: 21vh;
-    border: 1px solid blue;
     margin-bottom: 2vh;
     overflow: hidden;
     display: flex;
@@ -476,8 +515,12 @@ figure.gallery {
 
 .middle-artikel img {
     padding-right: 10px;
-    width: 50%;
+    width: 100%;
     object-fit: cover;
+}
+
+.column img {
+    height: 30vh;
 }
 
 .middle-artikel article a {
@@ -489,7 +532,6 @@ figure.gallery {
 }
 
 .stor-artikel {
-    border: 1px solid blue;
     margin-bottom: 2vh;
     overflow: hidden;
 }
@@ -533,6 +575,11 @@ figure.gallery {
     font-size: 1rem;
 }
 
+.column {
+    column-count: 2;
+    column-gap: 10px;
+}
+
 
 
 /* Anbefalinger */
@@ -562,7 +609,6 @@ figure.gallery {
 }
 
 .full {
-    border: 1px solid blue;
     margin-bottom: 2vh;
     overflow: hidden;
     width: 20vh;
@@ -581,3 +627,5 @@ figure.gallery {
     justify-content: space-between;
     gap: 20px;
 }
+
+
