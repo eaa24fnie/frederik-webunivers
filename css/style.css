@@ -265,6 +265,14 @@ a:visited {
     overflow: hidden;
 }
 
+.stor p a {
+    font-weight: 600;
+}
+
+.halv p a {
+    font-weight: 600;
+}
+
 .stor article {
     padding-top: 10px;
 }
@@ -571,6 +579,10 @@ figure.gallery {
     overflow: hidden;
 }
 
+.stor-artikel p a {
+    font-weight: 600;
+}
+
 .stor-artikel article {
     padding-top: 10px;
 }
@@ -806,4 +818,49 @@ form {
   
   input[type=submit]:hover {
     opacity: 0.8;
+}
+
+
+
+/* Nyheder */
+
+
+
+.p {
+    font-size: 1.4rem;
+}
+
+.nyheder {
+    padding-top: 50px;
+    width: 48%;
+
+
+    h3 {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+
+    p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+}
+
+.nyheder-img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.nyheder .column {
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.nyheder-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 50px;
 }
