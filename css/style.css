@@ -181,6 +181,10 @@ input.søg {
     background-origin: content-box;
 }
 
+.highlight {
+    color: var(--primary-color) !important;
+}
+
 
 
 /* body */
@@ -275,7 +279,7 @@ a:visited {
     display: flex;
     object-fit: cover;
     padding-top: 10px;
-    max-height: 185px;
+    flex-wrap: wrap;
 }
 
 .middle-halvt img {
@@ -294,9 +298,12 @@ a:visited {
 }
 
 .middle-halvt article p  {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
+    width: 90%;
 }
 
 .readmore {
@@ -729,4 +736,74 @@ figure.gallery {
 
 .dato {
     padding-bottom: 20px;
+}
+
+.events-billet {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.kommende-events article.center {
+    position: absolute;
+    width: 37%;
+    margin-top: -100px;
+}
+
+.kommende-events article.center a h5 {
+    font-size: 2rem;
+}
+
+
+
+/* Nyhedsbrev */
+
+
+
+form {
+    width: 75%;
+}
+
+.main-nyhedsbrev {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.container {
+    padding: 20px 0;
+    background-color: #f1f1f1;
+}
+  
+  .container:nth-child(2) {
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+  
+  input[type=text], input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+  input[type=checkbox] {
+    margin-top: 16px;
+}
+  
+  input[type=submit] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+  
+  input[type=submit]:hover {
+    opacity: 0.8;
 }
