@@ -50,6 +50,9 @@ h4 {
     font-weight: 800;  
 }
 
+/* Hver overskrift (h1 til h4) har tilpassede skriftstørrelser og -vægte. Dette er godt for hierarki og design.
+De er alle defineret som uppercase og har samme skrifttype, hvilket skaber et ensartet udseende.*/
+
 
 p {
     font-family: var(--font);
@@ -122,6 +125,9 @@ header {
     display: none;
 } 
 
+/* 
+.navbar ul er sat til display: none, men bliver synlig ved hover på .navbar li. Dette er en enkel måde at implementere dropdown-menuer på. */
+
 .navbar li a {
     display: block;
     padding: 0;
@@ -177,7 +183,7 @@ input.søg {
     display: block;
     padding: 1rem;
     padding-left: 3rem;
-    background: rgb(227, 227, 227) url("/img/Searchsort.svg") no-repeat -2rem;
+    background: rgb(227, 227, 227) url("/img/searchsort.svg") no-repeat -2rem;
     background-origin: content-box;
 }
 
@@ -205,6 +211,8 @@ input.søg {
     justify-content: space-between;
 }
 
+/* Brug af display: flex; i flere af sektionerne, såsom .header, .main, og .gallery, giver et fleksibelt layout, som er let at tilpasse. */
+
 .sides:nth-child(1) .halv h2 {
     padding-bottom: 0px
 }
@@ -225,10 +233,14 @@ a:visited {
 
 .h3:hover {
     background-color: var(--primary-color);
+}
 
-    h3, p {
-        color: var(--tertiary-color);
-    }
+.h3:hover p {
+    color: var(--tertiary-color);
+}
+
+.h3:hover h3 {
+    color: var(--tertiary-color);
 }
 
 .image-container a {
@@ -426,8 +438,8 @@ figure.gallery {
   }
   
   figure.gallery:hover {
-    scale: 1.1;
-  }
+    transform: scale(1.1);
+}
 
   figure.gallery a {
     display: flex;
@@ -501,6 +513,15 @@ figure.gallery {
     width: 9vh;
     padding: 10px;
     background: var(--tertiary-color);
+  }
+
+  .email {
+    font-family: var(--font);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 800; 
+    width: 100%;
+    padding-top: 1rem;
   }
 
 
@@ -833,18 +854,16 @@ form {
 .nyheder {
     padding-top: 50px;
     width: 48%;
+}
 
+.nyheder h3 {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
 
-    h3 {
-        font-size: 1.5rem;
-        padding-bottom: 10px;
-    }
-
-    p {
-        text-align: justify;
-        text-justify: inter-word;
-    }
-
+.nyheder p {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .nyheder-img {
